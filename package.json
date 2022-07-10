@@ -3,37 +3,34 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "./node_modules/.bin/cucumber-js -p default --publish  ",
+    "sd-generate": "cucumber-steps-defs -h",
+    "report": "ts-node src/cucumber/reporters/cucumber-html-reporter.ts",
+    "cucumber-generate" : "hiptest-publisher --token=237073547293189797311541844067761533271998079180447027825 --language=cucumber --framework=typescript --output-directory=src/generate-f-sd --filter-on-scenario-ids=7950686"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.0.0",
-    "@angular/common": "~13.0.0",
-    "@angular/compiler": "~13.0.0",
-    "@angular/core": "~13.0.0",
-    "@angular/forms": "~13.0.0",
-    "@angular/platform-browser": "~13.0.0",
-    "@angular/platform-browser-dynamic": "~13.0.0",
-    "@angular/router": "~13.0.0",
-    "rxjs": "~7.4.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "rxjs": "^7.5.5",
+    "tslib": "^2.4.0",
+    "zone.js": "^0.11.6"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.4",
-    "@angular/cli": "~13.0.4",
-    "@angular/compiler-cli": "~13.0.0",
-    "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.11.1",
-    "jasmine-core": "~3.10.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.4.3"
+    "@types/cucumber": "^7.0.0",
+    "@types/cucumber-html-reporter": "^5.0.1",
+    "@types/expect": "^24.3.0",
+    "@types/loglevel": "^1.6.3",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.0.3",
+    "@types/chai": "^4.3.1",
+    "chai": "^4.3.6",
+    "cucumber": "^6.0.7",
+    "cucumber-pretty": "^6.0.1",
+    "cucumber-steps-defs": "^1.0.1",
+    "cucumber-tsflow": "^4.0.0-preview.7",
+    "cucumber-html-reporter": "^5.5.0",
+    "playwright": "^1.23.1",
+    "ts-node": "^10.8.2",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }
